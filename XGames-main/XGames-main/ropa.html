@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XGames</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #header {
+            background-color: black;
+            transition: background-color 0.3s ease;
+            padding: 10px 0;
+        }
+
+        #header.navbar-scrolled {
+            background-color: #333;
+        }
+
+        #header .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        #header .navbar-brand {
+            color: white !important;
+        }
+
+        #header .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        #header .navbar-nav .nav-link:hover {
+            color: lightgray !important;
+        }
+
+        #concurso {
+            margin-top: 50px;
+        }
+
+        #footer {
+            background-color: black;
+            color: white;
+            padding: 50px 0;
+        }
+
+        #footer svg {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/descarga.png" alt="XGames Logo">
+                XGames
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="registro.html">Registrarse</a>
+                    </li>
+                </ul>
+
+                <!-- Utilizando ms-auto para alinear a la derecha -->
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="boleta.html">Boleta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Carrito.html">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="misDatos.html">Mis datos</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<div style="text-align: center;">
+    <h1>¡Concursa por una prenda de vestir!</h1>
+    <h2>Por compras superiores a $20.000 en productos ya te encuentras participando!</h2>
+  </div>
+<!-- Agregar contenedor para los productos del concurso -->
+<div id="concurso" class="container mt-5 row justify-content-center"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- JavaScript para obtener productos de la API y mostrarlos en el contenedor -->
+<script>
+    const urlAPI = 'https://fakestoreapi.com/products';
+
+    fetch(urlAPI)
+        .then(response => response.json())
+        .then(products => {
+            const concursoContainer = document.getElementById('concurso');
+
+            for (let i = 0; i < 12; i++) {
+                const product = products[Math.floor(Math.random() * products.length)];
+
+                const html = `
+                    <div class="card mx-2 my-3" style="width: 18rem;">
+                        <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.title}</h5>
+                            <p class="card-text">${product.description}</p>
+                            <a href="#" class="btn btn-primary">Participar en el concurso</a>
+                        </div>
+                    </div>
+                `;
+
+                concursoContainer.innerHTML += html;
+            }
+        });
+</script>
+
+</body>
+</html>

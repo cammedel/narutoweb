@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tienda de videojuegos para consola">
+    <meta name="author" content="XGames">
+    <link rel="icon" href="img/descarga.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>XGames</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('img/wp9204437.webp');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+        }
+
+        #header {
+            background-color: black; 
+            transition: background-color 0.3s ease; 
+        }
+
+        body {
+            background-image: url('img/wp9204437.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+        }
+
+        #header.navbar-scrolled {
+            background-color: #333; 
+        }
+
+        #header .navbar-brand {
+            color: white !important; 
+        }
+        
+        #header .navbar-nav .nav-link {
+            color: white !important; 
+        }
+
+        #header .navbar-nav .nav-link:hover {
+            color: lightgray !important; 
+        }
+
+        .ficha_container {
+            border: 2px solid black;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .ficha_titulo {
+            font-size: 40px; 
+        }
+
+    </style>
+</head>
+<body> 
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <img class="logo" src="img/descarga.png" alt="15px">
+                <a class="navbar-brand" href="index.html">XGames</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="registro.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Ingresar.html">Iniciar sesion</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="boleta.html">Boleta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="misCompras.html">Mis compras anteriores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="misDatos.html">Mis datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Cerrar sesion</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-4 mt-5 p-4 ficha_container">
+                <h1 class="text-center mb- ficha_titulo">Ficha</h1>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <img class="ficha_foto img-fluid" src="img/tomb-raider-definitive-edition-20141410411_1.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ficha_titulo">Tomb Raider</div>
+                        <div class="ficha_disponible">DISPONIBLE EN BODEGA</div>
+                        <div class="ficha_precio">$20.000</div>
+                        <div class="ficha_descripcion">
+                            <p>Tomb Raider es un juego que no te puedes perder si eres fan de la acción, la exploración y la intriga. ¿Estás listo para convertirte en la próxima leyenda de los videojuegos?</p>
+                        </div>
+                        <div class="unidades">En stock: 30 unidades</div>
+                        <br>
+                        <button type="button" class="btn btn-primary" onclick="agregarAlCarrito()">Agregar al carrito</button>
+                        <button type="button" class="btn btn-primary" onclick="agregarAlCarrito()">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mt-5 p-4 ficha_container">
+                <h1 class="text-center mb- ficha_titulo">Ficha</h1>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <img class="ficha_foto img-fluid" src="img/tomb-raider-definitive-edition-20141410411_1.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ficha_titulo">Tomb Raider</div>
+                        <div class="ficha_oferta">EN OFERTA SOLO PARA SUBSCRIPTORES</div>
+                        <div class="ficha_precio"><span style="text-decoration: line-through; color: red;">$20.000</span></div>
+                        <div class="ficha_precio_descuento">$18.000</div>
+                        <div class="ficha_descripcion">
+                            <p>Tomb Raider es un juego que no te puedes perder si eres fan de la acción, la exploración y la intriga. ¿Estás listo para convertirte en la próxima leyenda de los videojuegos?</p>
+                        </div>
+                        <div class="unidades">En stock: 30 unidades</div>
+                        <br>
+                        <button type="button" class="btn btn-primary" onclick="agregarAlCarrito()">Agregar al carrito</button>
+                        <button type="button" class="btn btn-primary" onclick="agregarAlCarrito()">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-4 mt-5 p-4 ficha_container">
+                <h1 class="text-center mb- ficha_titulo">Ficha</h1>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <img class="ficha_foto img-fluid" src="img/tomb-raider-definitive-edition-20141410411_1.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ficha_titulo">Tomb Raider</div>
+                        <div class="ficha_no_disponible">AGOTADO</div>
+                        <div class="ficha_precio">$18.000</div>
+                        <div class="ficha_descripcion">
+                            <p>Tomb Raider es un juego que no te puedes perder si eres fan de la acción, la exploración y la intriga. ¿Estás listo para convertirte en la próxima leyenda de los videojuegos?</p>
+                        </div>
+                        <div class="unidades">En stock: 0 unidades</div>
+                        <br>
+                        <button type="button" class="btn btn-primary" onclick="agregarAlCarrito()">Agregar al carrito</button>
+                        <button type="button" class="btn btn-primary" onclick="agregarAlCarrito()">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2024 XGames - Todos los derechos reservados</p>
+    </footer>  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function agregarAlCarrito() {
+            window.location.href = 'carrito.html';
+        }
+        
+    </script>
+</body>
+</html>
