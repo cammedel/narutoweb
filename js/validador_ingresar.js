@@ -1,4 +1,15 @@
 $(document).ready(function() {
+
+  $.validator.addMethod("emailCompleto", function(value, element) {
+
+    
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z\-0-9]{2,}))$/;
+
+  
+    return regex.test(value);
+
+  }, 'El formato del correo no es válido');
+
     $("#formulario-ingresar").validate({
       rules: {
        
@@ -9,7 +20,7 @@ $(document).ready(function() {
         
         password:{
           required:true,
-          minleght:5,
+          minlength:5,
           maxlength:15,
         },
        

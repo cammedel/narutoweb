@@ -93,44 +93,44 @@
     <br>
     <br>
     <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-4">
+           <div class="card">
+              <div class="card-body">
                         <h5 class="card-title text-center font-weight-bold">Iniciar Sesión</h5>
 
                         
                            
                               <!-- Campos del registro de usuario -->
-                                <form method="POST" id="formulario-ingresar" action="/ingresar">
+                         
                         
+                          <form method="POST" id="formulario-ingresar" action="/ingresar"> 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="password" name="password">
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                            </div>
-                            <div class="d-flex justify-content-between mt-3">
-                              <div class="options">
-                                <td class="options"><a href="#">Registrarse</a></td>
-                              </div>
-                              <div class="options">
-                                <td class="options"><a href="#">Olvide mi contraseña</a></td>
-                              </div>
+                              <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                              <input type="email" class="form-control" id="email" name="email" >
                           </div>
+                          <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                              <input type="password" class="form-control" id="password" name="password">
+                          </div>
+                          <div class="d-grid gap-2">
+                              <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                          </div>
+                          <div class="d-flex justify-content-between mt-3">
+                            <div class="options">
+                              <td class="options"><a href="#">Registrarse</a></td>
                             </div>
-                        </form>
-                    </div>
-                </div>
+                            <div class="options">
+                              <td class="options"><a href="#">Olvide mi contraseña</a></td>
+                            </div>
+                        </div>
+                          </form>
+                            
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    </form>
     <!-- Enlaces para simular el ingreso como cliente y como administrador -->
     <div class="text-center mt-3">
       <a href="boleta.html" class="btn btn-secondary me-2">Ingresar como Cliente</a>
@@ -189,7 +189,7 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  
  <!-- 4. Mi Script de Validadores (usa el Script de JQuery y de JQuery Validate anteriores) -->
- <script src="js/validador_usuarios.js" type="text/javascript"></script>
+ <script src="js/validador_ingresar.js" type="text/javascript"></script>
 
 </body>
 </html>
