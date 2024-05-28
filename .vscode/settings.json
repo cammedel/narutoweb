@@ -1,3 +1,22 @@
 {
-    "liveServer.settings.host": "127.0.0.2"
+    "editor.tabSize": 4,
+    "files.autosave":"afterDelay",
+    "liveServer.settings.port":8080,
+    "liveserver.settings.multirootworkspacename":"",
+    "files.exclude":{
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    }
+
+
+
+
+
+
+
+
 }
