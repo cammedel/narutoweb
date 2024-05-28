@@ -42,13 +42,13 @@ $(document).ready(function() {
           number: true,
           min: 0
         },
-        descuentosub: {
+        desc_subscriptor: {
           required: true,
           number: true,
           min: 0,
           max: 100
         },
-        descuentoof: {
+        desc_oferta: {
           required: true,
           number: true,
           min: 0,
@@ -82,7 +82,7 @@ $(document).ready(function() {
           soloNumeros: 'Ingrese solo números',
           min: 'El precio debe ser mayor a 0'
         },
-        descuentosub: {
+        desc_subscriptor: {
           required: 'El descuento es un campo requerido',
           minlength: 'El descuento debe tener un mínimo de 1 caracteres',
           maxlength: 'El descuento debe tener un máximo de 5 caracteres',
@@ -90,7 +90,7 @@ $(document).ready(function() {
           min: 'El descuento debe ser mayor a 0',
           max: 'El descuento debe ser menor a 100'
         },
-        descuentoof: {
+        desc_oferta: {
           required: 'El descuento es un campo requerido',
           minlength: 'El descuento debe tener un mínimo de 1 caracteres',
           maxlength: 'El descuento debe tener un máximo de 5 caracteres',
