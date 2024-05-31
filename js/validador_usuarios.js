@@ -44,7 +44,7 @@ $(document).ready(function() {
   
       }, "Sólo se permiten letras y espacios en blanco.");
   
-      $("#formulario-usuarios").validate({
+      $("#formulario_usuarios").validate({
         rules: {
           rut: {
             required: true,
