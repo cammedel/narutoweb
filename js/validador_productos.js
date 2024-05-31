@@ -23,19 +23,19 @@ $(document).ready(function() {
       rules: {
         id: {
           required: true,
-          minlength: 1,
-          maxlength: 5,
-          soloNumeros: true
+          number: true,
+          min: 1,
+        },
+        categoria:{
+          required: true
         },
         nombre: {
           required: true,
-          minlength: 1,
-          maxlength: 60
         },
         descripcion: {
           required: true,
           minlength: 10,
-          maxlength: 100
+          maxlength: 200
         },
         precio: {
           required: true,
@@ -54,52 +54,40 @@ $(document).ready(function() {
           min: 0,
           max: 100
         },
-        categoria:{
-          required: true
-        }
       },
       messages: {  
         id: {
           required: "El ID es un campo requerido",
-          minlength: 'El ID debe tener un mínimo de 1 caracteres',
-          maxlength: 'El ID debe tener un máximo de 7 caracteres',
-          soloNumeros: 'Ingrese solo números'
+          number: "El ID debe ser un número",
+          min: "El ID debe ser mayor o igual a 1"
         },   
-        nombrep: {
+        categoria: {
+          required: "La categoría es un campo requerido"
+        },
+        nombre: {
           required: 'El nombre es un campo requerido',
-          minlength: 'El nombre debe tener un minimo de 1 caracter',
-          maxlength: 'El nombre debe tener un máximo de 60 caracteres'
         },
         descripcion: {
           required: 'La descripción es un campo requerido',
           minlength: 'La descripción debe tener un mínimo de 10 caracteres',
-          maxlength: 'La descripción debe tener un máximo de 50 caracteres'
+          maxlength: 'La descripción debe tener un máximo de 200 caracteres'
         },
         precio: {
           required: 'El precio es un campo requerido',
-          minlength: 'El precio debe tener un mínimo de 1 caracteres',
-          maxlength: 'El precio debe tener un máximo de 7 caracteres',
-          soloNumeros: 'Ingrese solo números',
-          min: 'El precio debe ser mayor a 0'
+          number: 'El precio debe ser un número',
+          min: 'El precio debe ser mayor o igual a 0'
         },
         desc_subscriptor: {
           required: 'El descuento es un campo requerido',
-          minlength: 'El descuento debe tener un mínimo de 1 caracteres',
-          maxlength: 'El descuento debe tener un máximo de 5 caracteres',
-          soloNumeros: 'Ingrese solo numeros y %',
-          min: 'El descuento debe ser mayor a 0',
+          number: 'El descuento debe ser un número',
+          min: 'El descuento debe ser mayor o igual a 0',
           max: 'El descuento debe ser menor a 100'
         },
         desc_oferta: {
           required: 'El descuento es un campo requerido',
-          minlength: 'El descuento debe tener un mínimo de 1 caracteres',
-          maxlength: 'El descuento debe tener un máximo de 5 caracteres',
-          soloNumeros: 'Ingrese solo numeros y %',
-          min: 'El descuento debe ser mayor a 0',
+          number: 'El descuento debe ser un número',
+          min: 'El descuento debe ser mayor o igual a 0',
           max: 'El descuento debe ser menor a 100'
-        },
-        categoria: {
-          required: "La categoría es un campo requerido"
         },
       }
     }

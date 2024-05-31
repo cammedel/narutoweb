@@ -1,7 +1,7 @@
 {
     "editor.tabSize": 4,
     "files.autosave":"afterDelay",
-    "liveServer.settings.port":8080,
+    "liveServer.settings.port":8081,
     "liveserver.settings.multirootworkspacename":"",
     "files.exclude":{
         "**/.git": true,
