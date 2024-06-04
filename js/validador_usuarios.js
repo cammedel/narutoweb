@@ -46,17 +46,28 @@ $(document).ready(function() {
   
       $("#formulario_usuarios").validate({
         rules: {
+          id: {
+            required: true,
+            min: 1
+          },
+          Usuario: {
+            required: true
+          },
           rut: {
             required: true,
             rutChileno: true
           },
           nombres:{
             required:true,
-            soloLetras:true
+            soloLetras:true,
+            minlength: 3,
+            maxlength: 50
           },
           apellidos:{
             required:true,
-            soloLetras:true
+            soloLetras:true,
+            minlength: 3,
+            maxlength: 50
           },
           correo:{
             required:true,
@@ -69,6 +80,14 @@ $(document).ready(function() {
          
         },
         messages: {
+          id: {
+            required: "El ID es un campo requerido",
+            min: "El ID debe ser mayor a 0"
+          },
+          id: {
+            required: "El ID es un campo requerido",
+            min: "El ID debe ser mayor a 0"
+          },
           rut: {
             required: "El RUT es un campo requerido",
             rutChileno: "El RUT no es válido (escriba sin puntos y con guión)"
@@ -85,6 +104,10 @@ $(document).ready(function() {
             required: "El correo es un campo requerido",
             email: "El formato del correo no es válido",
           },
+          direccion: {
+            required: "La direccion es un campo requerido",
+            soloLetras:"La direccion solo pueden contener letras"
+          },
          
          
       }, 
@@ -92,6 +115,6 @@ $(document).ready(function() {
   });  
   
   
-  
-  
-  
+
+
+

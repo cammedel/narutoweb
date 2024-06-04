@@ -53,14 +53,14 @@ $(document).ready(function() {
   
 
   // Validar formulario de registro
-  $('#formulario_misdatos').validate(
+  $('#formulario_misDatos').validate(
     {
       rules: {
         rut: {
           required: true,
           rutChileno: true
         },
-        nombres {
+        nombres: {
           required: true,
           soloLetras: true,
           minlength: 3,
@@ -72,7 +72,7 @@ $(document).ready(function() {
           minlength: 5,
           maxlength: 50
         },
-        email: {
+        correo: {
           required: true,
           emailCompleto: true,
         },
@@ -110,7 +110,7 @@ $(document).ready(function() {
           maxlength: 'El apellido debe tener un máximo de 50 caracteres',
           soloLetras: "El nombre sólo puede contener letras y espacios en blanco",
         },
-        email: {
+        correo: {
           required: 'El correo es un campo obligatorio',
           emailCompleto: 'Ingrese un correo válido'
         },

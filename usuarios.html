@@ -210,15 +210,14 @@
                     <div class="container-fluid">
                         <div class="row">
                             <!-- Campos del registro de usuario -->
-                            <form method="POST" id="formulario_usuarios" action="/usuario">
+                            <form method="POST" id="formulario_usuarios" action="/usuario" class="needs-validation" novalidate>
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-sm-12 col-md-6">
-
-
+                                        <form action=""></form>
+                            
                                             <div class="form-group">
                                                 <label for="id" class="form-label">ID</label>
-                                                <input type="text" class="form-control form-control-sm" id="rut" name="id" placeholder="Escriba el id" required>
+                                                <input type="text" class="form-control form-control-sm" id="id" name="id" placeholder="Escriba el id" required>
                                                 <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
                                             </div>
                                             <br>
@@ -296,10 +295,11 @@
                                         </div>
                                     </div>
                                 </div>
+                            </form>
                         </div>
                         <br>
                         <br>
-                        </form>
+                        
                         <!-- Foto de perfil -->
                         <div class="col">
                             <table>
@@ -397,8 +397,10 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/validador_usuarios.js" type="text/javascript"></script>
+        
     </body>
 
 </html>
