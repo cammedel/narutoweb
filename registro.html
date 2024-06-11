@@ -106,14 +106,13 @@
 
                     <div class="container-fluid">
                         <div class="row">
-                         
+                          <div class="col-sm-12 col-md-10">
                             <!-- Campos del registro de usuario -->
                               <form method="POST" id="formulario-registro" action="/registrar_usuario">
                                 <div class="container-fluid">
                                   <div class="row">
                                     <div class="col-sm-12 col-md-6">
-                                      <div class="mb-3 fw-bold">
-                                 
+                                      <div class="mb-3 fw-bold">    
                                         <label for="rut" class="form-label">RUT</label>
                                         <input type="text" class="form-control" id="rut" placeholder="Ej: 12345678-5 (sin puntos y con guión)" name="rut" required>
                                         <div class="invalid-feedback">Debe llenar el campo rut</div>
@@ -169,10 +168,12 @@
                                         <label for="password2" class="form-label">Repetir contraseña</label>
                                         <input type="password" class="form-control" id="password2" placeholder="" name="password2" required>
                                         <div class="form-text">Por su privacidad, nunca compartiremos sus datos y contraseña con nadie <</div>
+                                        <br>
                                         <div class="invalid-feedback">Debe repetir la contraseña</div>
                                     </div>
     
                                     <button type="submit" class="btn btn-primary boton-pag-registrarse">Registrarse</button>
+                                    <br>
                                     <br>
                                     <button type="reset" class="btn btn-primary boton-pag-registrarse">Limpiar</button>
                                     </div>
@@ -183,7 +184,7 @@
                                 
                               </form>
                             <!-- Foto de perfil -->
-                            <div class="col">
+                            <div class="col-sm-12 col-md-2 text-center">
                                 <table>
                                     <tr>
                                         <td>
@@ -198,6 +199,7 @@
                                     </tr>
                                 </table>
                             </div>
+                          </div>
                         </div>
                     </div>
                 
